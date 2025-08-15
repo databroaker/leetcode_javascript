@@ -3,7 +3,11 @@ var plusOne = function (digits) {
   for (let i = 0; i < digits.length; i++) {
     strr += digits[i].toString();
   }
-  strr = (parseInt(strr) + 1).toString();
+
+  let int_num = BigInt(strr);
+  int_num++;
+
+  strr = int_num.toString();
 
   digits = [];
 
@@ -14,4 +18,4 @@ var plusOne = function (digits) {
   return digits;
 };
 
-console.log(plusOne([1, 2, 3]));
+console.log(plusOne([6, 1, 4, 5, 3, 9, 0, 1, 9, 5, 1, 8, 6, 7, 0, 5, 5, 4, 3]));
